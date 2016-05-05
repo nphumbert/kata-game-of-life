@@ -17,7 +17,7 @@ class GameOfLifeTest {
 
         val cell = newGeneration.get(Position(1, 1))
 
-        assertThat(cell.alive).isEqualTo(false)
+        assertThat(cell.alive).isFalse()
     }
 
     @Test
@@ -34,7 +34,7 @@ class GameOfLifeTest {
 
         val cell = newGeneration.get(Position(2, 1))
 
-        assertThat(cell.alive).isEqualTo(false)
+        assertThat(cell.alive).isFalse()
     }
 
     @Test
