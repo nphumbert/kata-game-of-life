@@ -7,7 +7,8 @@ class GameOfLife(val grid: Map<Position, Cell>) {
     fun nextGeneration(): GameOfLife =
             GameOfLife(
                     grid.mapValues {
-                        if (numberOfLiveNeighbours(it.key) < 2) {
+                        val numberOfLiveNeighbours = numberOfLiveNeighbours(it.key)
+                        if (numberOfLiveNeighbours < 2 || numberOfLiveNeighbours > 3) {
                             Cell(false)
                         } else {
                             it.value
